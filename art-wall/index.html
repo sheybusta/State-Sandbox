@@ -2,20 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>the average</title>
+    <title>paint blocks</title>
+    <link rel="stylesheet" href="./public/style.css" />
   </head>
 
   <body>
-    <main id="user interface">
-      <input id="number-input" type="number" value="0" />
-      <button id="add-button">add number to list</button>
-      <br />
-      <button id="reset-button">reset</button>
-      <br />
-      <br />
-      <div id="average"></div>
-      <hr />
-      <div id="numbers"></div>
-    </main>
+    <div id="user-interface">
+      <form id="wall-dimensions">
+        <input type="number" name="height" min="1" />
+        <input type="number" name="width" min="1" />
+      </form>
+      <div id="wall-container"></div>
+    </div>
+    <script type="module" src="src/init/index.js"></script>
   </body>
 </html>
