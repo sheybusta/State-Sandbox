@@ -11,7 +11,20 @@ const renderPhrasesList = (arrOfStrings) => {
     list.appendChild(listItem); // <ol><li></li></ol>
   }
 
-  return list; // <ol></ol>
+  return list; // ELEMENT <ol></ol>
 };
 
-export { renderPhrasesList };
+const renderFavorite = (id, phrase) => {
+  const favoriteCaption = document.createElement("p"); // render in PARAGRAPH
+  favoriteCaption.innerHTML = "favorite";
+
+  const favorite = document.createElement("code");
+  favorite.innerHTML = `${id}. ${phrase}`;
+
+  const favoriteContainer = document.createElement("div");
+  favoriteContainer.appendChild(favoriteCaption);
+  favoriteContainer.appendChild(favorite);
+  return favoriteContainer; // render div
+};
+
+export { renderPhrasesList, renderFavorite };

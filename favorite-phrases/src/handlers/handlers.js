@@ -1,5 +1,5 @@
 import { state } from "../data.js";
-import { renderPhrasesList } from "../components/components.js";
+import { renderFavorite, renderPhrasesList } from "../components/components.js";
 
 const addPhraseHandler = (event) => {
   // this is the handler to add phrase
@@ -27,4 +27,27 @@ const addPhraseHandler = (event) => {
   phrasesEl.appendChild(renderedLis); // component its inside of big div.
 };
 
-export { addPhraseHandler };
+const setFavoriteHandler = (event) => {
+  // make sure LI was clicked
+  if (event.target.nodeName !== "LI") {
+    console.log("did not click a list item"); // if user doesn't click on LI
+    return;
+  }
+
+  // read and process user input
+  const favoriteLi = event.target; // take Li #2
+  const favoriteIndexStr = favoriteLi.id; // take the id converto to string -> "2"
+  const favoriteIndex = Number(favoriteIndexStr); // convert number -> 2
+
+  // update state
+
+  state.favorite = favoriteIndex; // we know that is 2
+
+  // render state and update UI
+  const favoritePhrase = state.phrases[state.favorite]; // phrase and 2
+  const favoriteView = renderFavorite(favoriteIndex, favoritePhrase); // order in 2 and phrase
+  const favoriteEl = document.getElementById("favorite");
+  favoriteEl.innerHTML = ""; // delete previuos element and adds new one
+  favoriteEl.appendChild(favoriteView);
+};
+export { addPhraseHandler, setFavoriteHandler };
