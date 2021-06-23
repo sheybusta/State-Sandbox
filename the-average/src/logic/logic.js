@@ -13,7 +13,7 @@ const average = (arrOfNumbers) => {
 
   const numberOfNumbers = arrOfNumbers.length;
   const sum = arrOfNumbers.reduce((sum, next) => sum + next); // sum of numbers
-  const avergare = sum / numberOfNumbers;
+  const average = sum / numberOfNumbers;
   return average;
 };
 

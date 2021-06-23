@@ -1,5 +1,5 @@
 import { state } from "../data.js";
-import { renderNumberList } from "../components/components.js";
+import { renderNumberList, renderAverage } from "../components/components.js";
 import { average } from "../logic/logic.js";
 
 const addNumberHandler = () => {
@@ -19,6 +19,22 @@ const addNumberHandler = () => {
   const numbersContainer = document.getElementById("numbers");
   numbersContainer.innerHTML = "";
   numbersContainer.appendChild(listView);
+
+  //render and append new average
+
+  const averageView = renderAverage(state.average); // component renderAverage
+  const averageContainer = document.getElementById("average");
+  averageContainer.innerHTML = "";
+  averageContainer.appendChild(averageView);
 };
 
-export { addNumberHandler };
+const resetHandler = () => {
+  // reset state to it's initial values
+  state.numbers = [];
+  state.average = 0;
+
+  // reset Ui
+  document.getElementById("numbers").innerHTML = ""; // clear out container
+  document.getElementById("average").innerHTML = ""; // clear out container
+};
+export { addNumberHandler, resetHandler };
