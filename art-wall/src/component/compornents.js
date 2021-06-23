@@ -1,3 +1,13 @@
+import { handleMouseMove } from "../handlers/handlers";
+
+const colorChanger = (className) => {
+  // create div
+  const element = document.createElement("div");
+  element.className = className;
+  element.addEventListener("mousemove", handleMouseMove);
+  return element;
+};
+
 const artWall = (height, width) => {
   // parameters same as keys of state
   //
@@ -22,3 +32,5 @@ const artWall = (height, width) => {
   }
   return table;
 };
+
+export { colorChanger, artWall };
