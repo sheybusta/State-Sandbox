@@ -1,5 +1,6 @@
 import { state } from "../data.js";
 import { renderNumberList } from "../components/components.js";
+import { average } from "../logic/logic.js";
 
 const addNumberHandler = () => {
   // gather user input

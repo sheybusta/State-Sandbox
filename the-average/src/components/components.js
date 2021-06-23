@@ -11,4 +11,17 @@ const renderNumberList = (arrOfNumbers) => {
   return list;
 };
 
-export { renderNumberList };
+const renderAverage = (avg) => {
+  const averageCaption = document.createElement("p");
+  averageCaption.innerHTML = "average:";
+
+  const average = document.createElement("code");
+  average.innerHTML = avg;
+
+  const averageContainer = document.createElement("div");
+  averageContainer.appendChild(averageCaption);
+  averageContainer.appendChild(average);
+  return averageContainer;
+};
+
+export { renderNumberList, renderAverage };
