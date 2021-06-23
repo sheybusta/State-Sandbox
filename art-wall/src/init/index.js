@@ -1,2 +1,2 @@
-import "../src/init/ui.js";
+import "./ui.js";
 import "../listeners/listener.js";
