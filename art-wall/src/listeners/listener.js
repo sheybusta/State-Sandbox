@@ -1,5 +1,5 @@
-document
-  .getElementById("add-button")
-  .addEventListener("click", addNumberHandler);
+import { handleChangeDimensions } from "../handlers/handlers.js";
 
-document.getElementById("reset-button").addEventListener("click", resetHandler);
+document
+  .getElementById("wall-dimensions")
+  .addEventListener("change", handleChangeDimensions);
