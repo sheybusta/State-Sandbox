@@ -11,7 +11,7 @@ const addNumberHandler = () => {
   // update state
 
   state.numbers.push(userInput);
-  //   state.average = average(state.numbers);
+  state.average = average(state.numbers);
 
   // render and append new list
 
