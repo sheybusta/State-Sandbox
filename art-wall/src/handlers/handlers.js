@@ -1,3 +1,5 @@
+import { artWall } from "../component/compornents.js";
+
 const handleMouseMove = (event) => {
   const x = Math.floor((event.clientX / window.innerWidth) * 255);
   const y = Math.floor((event.clientY / window.innerHeight) * 255);
@@ -12,10 +14,10 @@ const handleChangeDimensions = (event) => {
   state.height = Number(form.height.value);
   state.width = Number(form.width.value);
 
-  // create new wall with user input
-  const newWall = artWall(state.height, state.width);
+  // create new wall with new state
+  const newWall = artWall(state.height, state.width); // artWall is a component
 
-  // render state and update
+  // render state
   const wallContainer = document.getElementById("wall-container");
   wallContainer.innerHTML = "";
   wallContainer.appendChild(newWall);
