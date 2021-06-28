@@ -1,13 +1,13 @@
-// First think: what you want from users data to them interact with our application?
+// First thought: what you want from users data to them interact with our application?
 
 const state = {
     // store "correct" answers. we start with 0 correct answer
     numCorrect: 
     // store "all user answer" even the wrong ones 
-    answers = [],
+    userAnswers = [],
 
     // these are questions you provide to get the specific answer. Why it is object? 
-    myQuestions = [
+   questions = [
   {
     question: "What is 10/2?",
     answers: {

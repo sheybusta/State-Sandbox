@@ -1,5 +1,5 @@
 //make handler
-
+// import {} from "../componets/comp1.js";
 const showResultsHandler = () => {
   // gather answer
 
