@@ -1,5 +1,7 @@
 import { artWall } from "../component/compornents.js";
 
+import { state } from "../data.js";
+
 // import { height, width } from "../data.js";
 
 console.log("initial state:", state);

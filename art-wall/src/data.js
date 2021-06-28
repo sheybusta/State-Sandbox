@@ -3,4 +3,4 @@ const state = {
   width: 8,
 };
 
-export { height, width };
+export { state };
